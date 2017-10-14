@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from api.serializers import UserSerializer, GroupSerializer
+from django.views.generic import TemplateView
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -19,3 +20,6 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class RootView(TemplateView):
+    template_name = "root.html"
