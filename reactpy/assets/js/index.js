@@ -1,14 +1,20 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from 'react';
+const ReactDOM = require('react-dom');
 
-var Hello = React.createClass ({
-    render: function() {
-        return (
-            <h1>
-            Hello, React!
-            </h1>
-        )
+class UsersList extends React.Component {
+    constructor() {
+        super();
+        this.state = { something: null };
     }
-})
+    render() {
+        return(
+            <div>
+            <div>HELLO REACT</div>
+            <div>Testing hotloading</div>
+            </div>
+        );
+    }
+}
 
-ReactDOM.render(<Hello />, document.getElementById('container'))
+ReactDOM.render(<UsersList url='/'/>, 
+    document.getElementById('container'))
