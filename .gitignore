@@ -104,3 +104,7 @@ node_modules/
 
 # database
 reactpy/db.sqlite3
+
+# react
+reactpy/assets/bundles/**
+reactpy/webpack-stats.json
